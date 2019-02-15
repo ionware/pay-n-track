@@ -1,0 +1,39 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "prod": "npm run production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "jasmine": "^3.3.1",
+    "laravel-mix": "^4.0.14",
+    "live-server": "^1.2.1",
+    "mocha": "^5.2.0",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.17.0",
+    "sass-loader": "7.*"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "handlebar": "^1.0.0",
+    "hapi": "^18.1.0",
+    "helmet": "^3.15.1",
+    "mongoose": "^5.4.12",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  }
+}

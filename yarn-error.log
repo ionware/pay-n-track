@@ -1,0 +1,67 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add sass-loader@7.* sass resolve-url-loader@2.3.1 --dev --production=false
+
+PATH: 
+  /usr/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/ionware/learning/node/node_modules/.bin:/usr/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/ionware/learning/node/node_modules/.bin:/home/ionware/.config/composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  8.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/ionware/.cache/yarn/v2/npm-prettier-1.16.3-8c62168453badef702f34b45b6ee899574a6a65d/.yarn-metadata.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1136:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon server.js",
+      "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+      "watch": "npm run development -- --watch",
+      "prod": "npm run production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "chai": "^4.2.0",
+      "cross-env": "^5.2.0",
+      "jasmine": "^3.3.1",
+      "laravel-mix": "^4.0.14",
+      "live-server": "^1.2.1",
+      "mocha": "^5.2.0"
+    },
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "bootstrap": "^4.3.1",
+      "express": "^4.16.4",
+      "handlebar": "^1.0.0",
+      "hapi": "^18.1.0",
+      "helmet": "^3.15.1",
+      "mongoose": "^5.4.12",
+      "morgan": "^1.9.1",
+      "pug": "^2.0.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
