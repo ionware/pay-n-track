@@ -1,25 +1,12 @@
 // @ts-check
 const express = require('express');
-const fs = require('fs');
 const app = express();
-const path = require('path');
+const morgan = require('morgan');
 const PORT = process.env.PORT || 3000;
 
-app.use(function(req, res, next) {
-    console.log(`Request URL: ${req.url} at ${new Date()}`);
-    next();
-});
+app.use(morgan('short'));
 
-app.use((req, res, next) => {
-    let filePath = path.join(__dirname, 'static', req.url);
-    fs.stat(filePath, (err, fileInfo) => {
-        if (err) return next();
-
-        if (fileInfo.isFile())
-            return res.sendFile(filePath);
-        next();
-    });
-});
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.use((req, res) => {
     res.status(404).send("File Not Found");
